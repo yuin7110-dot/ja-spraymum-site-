@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>品種一覧 | JAひまわりスプレーマム部会</title>
+  <meta name="description" content="JAひまわりスプレーマム部会の品種一覧。花色や出荷時期、特徴から品種を探せます。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo" aria-label="トップページ">
+        <span>JAひまわりスプレーマム部会</span>
+      </a>
+      <button class="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV ===== -->
+  <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="メインメニュー">
+    <a href="index.html">
+      トップ <span class="en" style="font-size:0.8rem;color:#757575;margin-left:auto;">Home</span>
+    </a>
+    <a href="varieties.html" class="active">
+      品種一覧 <span class="en" style="font-size:0.8rem;color:#757575;margin-left:auto;">Varieties</span>
+    </a>
+    <a href="business.html">
+      花屋・市場の方へ <span class="en" style="font-size:0.8rem;color:#757575;margin-left:auto;">For Buyers</span>
+    </a>
+    <a href="consumer.html">
+      スプレーマムの魅力 <span class="en" style="font-size:0.8rem;color:#757575;margin-left:auto;">About</span>
+    </a>
+    <a href="farmer.html">
+      生産者・就農希望の方へ <span class="en" style="font-size:0.8rem;color:#757575;margin-left:auto;">For Farmers</span>
+    </a>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero hero-sub">
+    <div class="hero-bg">
+      <img src="images/hero-top.png" alt="スプレーマムの花" width="1200" height="800" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.8);">Varieties / 品種一覧</p>
+      <h1>品種を探す</h1>
+      <p class="hero-subcopy">花色・出荷時期・特徴から、必要な品種にたどり着けます。</p>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <span class="scroll-hint-text">scroll</span>
+      <span class="scroll-hint-arrow">↓</span>
+    </div>
+  </section>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">トップ</a><span>›</span>品種一覧</p>
+  </div>
+
+  <!-- ===== VARIETIES ===== -->
+  <section id="varieties">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-subtitle">Search / 検索</p>
+        <h2>条件で絞り込む</h2>
+        <p>品種は順次追加していきます。情報が未登録の品種もあります。</p>
+      </div>
+
+      <div class="filters fade-in" aria-label="品種の絞り込み">
+        <div class="filter-group">
+          <label for="filter-keyword">キーワード</label>
+          <input id="filter-keyword" type="search" placeholder="例：ピンク / グリーン / 彼岸" autocomplete="off">
+        </div>
+        <div class="filter-group">
+          <label for="filter-color">花色</label>
+          <select id="filter-color">
+            <option value="">すべて</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-month">出荷時期（月）</label>
+          <select id="filter-month">
+            <option value="">すべて</option>
+            <option value="unknown">未登録</option>
+            <option value="1">1月</option>
+            <option value="2">2月</option>
+            <option value="3">3月</option>
+            <option value="4">4月</option>
+            <option value="5">5月</option>
+            <option value="6">6月</option>
+            <option value="7">7月</option>
+            <option value="8">8月</option>
+            <option value="9">9月</option>
+            <option value="10">10月</option>
+            <option value="11">11月</option>
+            <option value="12">12月</option>
+          </select>
+        </div>
+      </div>
+
+      <p class="results-meta fade-in">
+        <span id="results-count">0</span> 件
+      </p>
+
+      <div class="card-grid fade-in" id="variety-grid" aria-label="品種一覧">
+        <!-- JS renders cards here -->
+      </div>
+
+      <p class="no-results" id="no-results" hidden>条件に一致する品種が見つかりませんでした。</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-logo">
+        JAひまわりスプレーマム部会
+      </div>
+      <nav class="footer-links" aria-label="フッターリンク">
+        <a href="index.html">トップ</a>
+        <a href="varieties.html">品種一覧</a>
+        <a href="business.html">花屋・市場の方へ</a>
+        <a href="consumer.html">スプレーマムの魅力</a>
+        <a href="farmer.html">生産者・就農希望の方へ</a>
+        <a href="https://ja-himawari.com/" target="_blank" rel="noopener noreferrer">JAひまわり公式サイト</a>
+        <a href="https://www.facebook.com/himawari.spraymum" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </nav>
+      <address class="footer-address">
+        〒442-8517 愛知県豊川市諏訪1丁目1番地<br>
+        JAひまわり 営農部<br>
+        TEL: 0533-85-3171
+      </address>
+      <p class="footer-legal">© 2026 JAひまわりスプレーマム部会</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/varieties.js"></script>
+</body>
+</html>
