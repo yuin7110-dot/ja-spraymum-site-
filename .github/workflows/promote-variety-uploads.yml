@@ -1,0 +1,37 @@
+name: Move uploaded variety files
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/promote-variety-uploads.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  move-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Move uploaded files into site paths
+        run: |
+          shopt -s dotglob
+          for upload_dir in 1 2; do
+            if [ -d "$upload_dir" ]; then
+              cp -R "$upload_dir"/* .
+              rm -rf "$upload_dir"
+            fi
+          done
+
+      - name: Commit corrected paths
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Place variety photos in site folders"
+            git push
+          fi
